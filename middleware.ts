@@ -1,8 +1,8 @@
-// middleware.js
-import { NextResponse } from 'next/server';
+// middleware.ts
+import { NextResponse, NextRequest } from 'next/server';
 
 // Função de middleware
-export function middleware(req) {
+export function middleware(req: NextRequest) { // Adicionando o tipo NextRequest
   // Obtém o cookie do token
   const token = req.cookies.get('token');
 
